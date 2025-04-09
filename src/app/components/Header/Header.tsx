@@ -1,29 +1,24 @@
-import * as Yup from "yup"
-import { Field, Formik } from "formik";
+import Link from "next/link";
 import Image from "next/image";
+import { SearchQuery } from "./SearchQuery";
 
 export const Header = () => {
-  const initialValues = {
-    search: ""
-  };
-
-  const validationSchema = Yup.object().shape({
-    search: Yup.string()
-  })
-
-  const handleSearchQuery = (values:string {onReset}) => {
-    console.log(values)
-    onReset()
-  }
   return (
-    <header>
-      <div>
-        {/* <Image /> */}
-        <Formik initialValues={initialValues} onSubmit={handleSearchQuery} onReset={""} validationSchema={validationSchema}>
-            <Field name="search" placeholder="Search for meme"/>
-        </Formik>
-        <div></div>
-      </div>
+    <header className="fixed top-0 left-0 right-0 flex justify-between items-center mx-4 lg:mx-8 my-4">
+      <Image src="/MEMX.svg" alt="product logo" width={80} height={40} />
+      <SearchQuery />
+      <Login />
     </header>
+  );
+};
+
+const Login = () => {
+  return (
+    <Link
+      href="login"
+      className="bg-black px-6 py-2 text-white rounded-lg font-medium"
+    >
+      Login
+    </Link>
   );
 };
