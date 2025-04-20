@@ -1,4 +1,4 @@
-export const MemxContent = () => {
+export const MemxContentNavigation = () => {
   return (
     <main className="grid gap-4 pt-24 mx-4 lg:mx-8">
       <div className="flex space-x-2.5 text-[#54585A]">

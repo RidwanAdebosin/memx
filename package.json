@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
     "formik": "^2.4.6",
     "lodash": "^4.17.21",
     "lucide-react": "^0.487.0",

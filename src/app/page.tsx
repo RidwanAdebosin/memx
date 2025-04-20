@@ -1,11 +1,11 @@
 import { Header } from "./components/Header/Header";
-import { MemxContent } from "./components/MemxContentSection/MemxContent";
+import { Memx } from "./components/MemxContentSection/page";
 
 export default function Home() {
   return (
     <>
       <Header />
-      <MemxContent />
+      <Memx />
     </>
   );
 }
