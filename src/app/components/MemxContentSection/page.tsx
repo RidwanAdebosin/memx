@@ -1,5 +1,5 @@
 import { MemxContentNavigation } from "./MemxNavigation";
-import { MemxContent } from "./MemexContentSection/MemxContents";
+import MemxContent from "./memexContentSection/MemxContents";
 
 export const Memx = () => {
   return (

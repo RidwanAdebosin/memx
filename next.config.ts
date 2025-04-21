@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       "i.ytimg.com",
       "res.cloudinary.com",
       "example.com",
+      "pbs.twimg.com",
     ],
   },
 };
