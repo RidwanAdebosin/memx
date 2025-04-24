@@ -1,5 +1,5 @@
 "use client";
-import { debounce } from "lodash";
+import debounce from "just-debounce";
 import { Search } from "lucide-react";
 import { Field, Form, Formik } from "formik";
 import { useCallback, useMemo } from "react";

@@ -115,8 +115,8 @@ const MemxContent = () => {
     setVisibleCount((prev) => prev + 8);
   };
   return (
-    <section className="grid justify-between overflow-hidden">
-      <ul className="grid grid-cols-1 justify-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:flex 2xl:justify-between 2xl:flex-wrap lg:mx-8 gap-4">
+    <section className="grid justify-center lg:justify-between overflow-hidden transition-colors duration-300">
+      <ul className="grid grid-cols-1 mx-2 pt-46 justify-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:flex 2xl:justify-between 2xl:flex-wrap lg:mx-8 gap-4">
         {itemsToShow?.map((item, id) => (
           <SingleMemx item={item} key={id} />
         ))}

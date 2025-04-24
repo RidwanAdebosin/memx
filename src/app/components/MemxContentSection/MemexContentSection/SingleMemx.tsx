@@ -32,11 +32,11 @@ const SingleMemx = ({ item }: { item: MemxItem }) => {
 
   return (
     <li
-      className="grid gap-2 max-w-[311px] bg-[#F5F5F5] rounded-lg mb-4 dark:text-black relative"
+      className="grid gap-2 max-w-[311p] bg-[#F5F5F5] rounded-lg mb-4 dark:text-black relative borde overflow-clip"
       ref={menuRef}
     >
-      <div className="w-full h-[156px] rounded-t-lg  overflow-clip">
-        <video controls src={item?.video} className="w-full">
+      <div className="w-full h-[156px] rounded-t-lg">
+        <video controls src={item?.video} className="w-full ">
           <track
             src={item?.video}
             kind="captions"
@@ -58,7 +58,7 @@ const SingleMemx = ({ item }: { item: MemxItem }) => {
             />
           </div>
           <div className="">
-            <p className="flex justify-start w-[238px] line-clamp-2 min-h-[2.5rem] font-semibold pb-0">
+            <p className="flex justify-start w-[238px] lg:w-full line-clamp-2 min-h-[2.5rem] font-semibold pb-0">
               {item?.description}
             </p>
             <div className="flex  text-[#504e4ed4] max-h-[1.5rem]">

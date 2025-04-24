@@ -3,10 +3,13 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
 import { HeaderProps } from "./Header";
+import { ThemeToggle } from "./ThemeToggle";
 
 export const HamburgerMenu: React.FC<HeaderProps> = ({
   hamburgerIsOpen,
   setHamburgerIsOpen,
+  onToggleDarkMode,
+  isDark,
 }) => {
   return (
     <AnimatePresence>
@@ -29,19 +32,19 @@ export const HamburgerMenu: React.FC<HeaderProps> = ({
             className="absolute inset-0 bg-white z-50 h-screen"
           >
             <button
-              className="w-full flex justify-end pt-5 pr-5"
+              className="w-full flex justify-end pt-5 pr-2 dark:bg-black"
               onClick={() => setHamburgerIsOpen(false)}
             >
-              <X />
+              <X size={44} />
             </button>
-            <ul className="flex flex-col space-y-6 p-6 pt-10 h-full w-full">
+            <ul className="flex flex-col space-y-6 p-6 pt-10 h-full w-full dark:bg-black">
               {[
                 { label: "Login", href: "login" },
                 { label: "Sign Up", href: "sign-up" },
               ].map((item, index) => (
                 <li
                   key={index}
-                  className="text-base font-semibold  cursor-pointer transition-colors duration-200 hover:underline focus:outline-none focus:text-black"
+                  className="text-base font-semibold  cursor-pointer transition-colors duration-200 hover:underline focus:outline-none focus:text-black dark:text:white "
                 >
                   {item.label === "Login" || "Sign Up" ? (
                     <Link
@@ -57,6 +60,11 @@ export const HamburgerMenu: React.FC<HeaderProps> = ({
                   )}
                 </li>
               ))}
+
+              <ThemeToggle
+                onToggleDarkMode={onToggleDarkMode}
+                isDark={isDark}
+              />
             </ul>
           </motion.div>
         </>
